@@ -19,6 +19,18 @@
     padding: 0 15px;
 }
 
+[class*="__container-medium"] {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+[class*="__container-big"] {
+    max-width: 1430px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 /*header*/
 .header {
     font-family: "Merriweather", serif;
@@ -103,6 +115,7 @@
     width: 200px;
     border-radius: 10px;
     padding: 20px;
+    color: #fff;
     background-color: #d9964b;
 }
 
@@ -121,6 +134,7 @@
     position: relative;
     z-index: 5;
 }
+
 .decor {
     visibility: visible;
     opacity: 1;
@@ -270,6 +284,7 @@
     height: 100%;
     top: 12px;
     left: -8px;
+    transition: all 0.3s;
     background-color: rgba(255, 255, 255, 0.06);
 }
 
@@ -288,7 +303,7 @@
 .hero__img img {
     border-radius: 215px;
     width: 100%;
-    aspect-ratio: auto;
+    aspect-ratio: 390/554;
 }
 
 .hero__content {
@@ -324,23 +339,499 @@
     height: 78.95%;
 }
 
-.footer {
-    padding: 32px 0 37px 0;
+/*about*/
+.about {
+    position: relative;
+    background-color: #fff;
+    padding: 160px 0;
+    font-family: "Cormorant Infant", serif;
+    font-weight: 700;
 }
 
-.footer__container {
-    font-family: "Merriweather", serif;
+.decor-about,
+.jewels__decor {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.decor-about__leaf {
+    position: absolute;
+    top: 40%;
+    left: 0;
+}
+
+.decor-about__right {
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+.about__block-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    text-align: center;
+}
+
+.card__img {
+    margin-bottom: 28px;
+}
+
+.card__img img {
+    max-width: 100%;
+}
+
+.card__title {
+    color: #000;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.card__text {
+    color: #6D6D6D;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
-    line-height: 1.4;
+    font-weight: 400;
+}
+
+.card__text > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.about__we-do {
+    padding-top: 160px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
+    gap: 75px;
 }
 
-.footer__link {
+.we-do__block-left {
+    max-width: 503px;
+    padding-top: 70px;
+}
+
+.we-do__subtitle {
+    color: #D58417;
     font-size: 20px;
+    margin-bottom: 27px;
+    text-transform: uppercase;
+}
+
+.we-do__title,
+.products__title {
+    text-transform: capitalize;
+    color: #000;
+    font-size: 64px;
+    margin-bottom: 31px;
+}
+
+.we-do__text > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.we-do__text,
+.products__subtitle {
+    color: #606060;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.we-do__block-right {
+    display: flex;
+}
+
+.we-do__img {
+    align-self: center;
+    flex-basis: 31.4%;
+    flex-shrink: 0;
+    border-radius: 249px;
+    border: 1px solid #000;
+    padding-top: 14px;
+    margin-right: 31px;
+    transition: padding-top 0.3s;
+}
+
+.we-do__img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 249px;
+    aspect-ratio: 177/336;
+    object-fit: cover;
+    margin-bottom: -14px;
+    margin-left: -10px;
+    transition: margin-bottom 0.3s, margin-left 0.3s;
+}
+
+.we-do__right-img {
+    align-self: center;
+    flex-basis: 52.2%;
+    flex-shrink: 0;
+    border-radius: 249px;
+    border: 1px solid #000;
+    padding-top: 19px;
+    transition: padding-top 0.3s;
+}
+
+.we-do__right-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 249px;
+    aspect-ratio: 307/500;
+    object-fit: cover;
+    margin-bottom: -19px;
+    margin-left: -11px;
+    transition: margin-bottom 0.3s, margin-left 0.3s;
+}
+
+/*products*/
+.products {
+    font-family: "Cormorant Infant", serif;
     font-weight: 700;
+    padding: 120px 0;
+}
+
+.products__title {
+    margin-bottom: 21px;
+}
+
+.products__subtitle {
+    text-transform: capitalize;
+}
+
+.products__block-title {
+    text-align: center;
+    margin-bottom: 84px;
+}
+
+.product__block-item {
+    display: flex;
+    margin: 0 -15px 76px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product__item {
+    flex: 0 1 25%;
+    padding: 0 15px;
+}
+
+.product__img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 270/270;
+    border-radius: 5px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.body-product {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.body-product__title,
+.earrings__title {
+    transition: 0.3s;
+}
+
+.body-product__title::after,
+.earrings__title::after {
+    content: "";
+    position: relative;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: 0.5s;
+}
+
+.product__body > *:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/*jewels*/
+.jewels {
+    position: relative;
+    font-family: 'Cormorant Infant', serif;
+    color: #000;
+    font-weight: 700;
+}
+
+.jewels__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.jewels__right {
+    position: absolute;
+    top: 150px;
+    right: 0;
+}
+
+.jewels__container-medium {
+    display: flex;
+    gap: 20px;
+}
+
+.jewels__title {
+    max-width: 488px;
+    font-size: 60px;
+    line-height: 1.2;
+    padding-top: 150px;
+}
+
+.jewels__title::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 3px;
+    margin-top: 13px;
+    background: #78473b;
+}
+
+.jewels__block-card {
+    display: flex;
+    gap: 45px;
+}
+
+.jewels__card {
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+}
+
+.jewels__card:last-child {
+    padding-top: 0;
+}
+
+.jewels__border-card {
+    flex-basis: 52.2%;
+    flex-shrink: 0;
+    border: 1px solid #000;
+    margin-bottom: 25px;
+}
+
+.jewels__img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 334/381;
+    object-fit: cover;
+    margin: 9px -10px -9px 10px;
+    transition: 0.3s ease;
+}
+
+.jewels__info,
+.jewels__price {
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.jewels__new {
+    font-size: 46px;
+    line-height: 1.2;
+    max-width: 339px;
+    margin-bottom: 31px;
+}
+
+/*earrings*/
+.earrings {
+    font-family: "Cormorant Infant", serif;
+    padding: 162px 0 139px 0;
+}
+
+.earrings__body {
+    display: flex;
+    margin: 0 -17px;
+    row-gap: 34px;
+    flex-wrap: wrap;
+}
+
+.earrings__item {
+    flex: 0 1 33.33333%;
+    padding: 0 17px;
+}
+
+.earrings__img-oval {
+    flex-basis: 56%;
+    flex-shrink: 0;
+    position: relative;
+    transition: transform 0.3s;
+
+}
+
+.earrings__img-oval img {
+    height: 100%;
+    width: 100%;
+    border-radius: 500px;
+    aspect-ratio: 435/673;
+    object-fit: cover;
+}
+
+.earrings__img-oval::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 17px;
+    right: 24px;
+    z-index: 10;
+    border: 1px solid rgba(33, 14, 1, 0.95);
+    width: 435px;
+    height: 673px;
+    border-radius: 500px;
+    transition: all 0.3s;
+}
+
+.earrings__img-oval::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 435px;
+    height: 673px;
+    border-radius: 500px;
+    background: linear-gradient(0deg, rgba(33, 14, 1, 0.95) 2.4%, rgba(255, 255, 255, 0.00) 101.13%);
+}
+
+.earrings__body-item {
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.4;
+    position: absolute;
+    bottom: 65px;
+    left: 90px;
+    text-align: center;
+    z-index: 10;
+}
+
+.earrings__body-item > *:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.earrings__title {
+    font-size: 36px;
+}
+
+.earrings__price {
+    font-size: 40px;
+}
+
+.earrings__link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.earrings__img {
+    margin-bottom: 39px;
+    transition: transform 0.3s;
+}
+
+.earrings__img {
+    height: 100%;
+    aspect-ratio: 434/512;
+    object-fit: cover;
+}
+
+.earrings__block-body > *:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.earrings__block-body {
+    text-align: left;
+    font-weight: 700;
+}
+
+/*footer*/
+.footer {
+    color: #fff;
+    background-color: #3D1901;
+    padding: 90px 0 37px;
+}
+
+.footer__container > *:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.footer__container {
+    margin-bottom: 59px;
+}
+
+.footer__body {
+    text-align: center;
+}
+
+.footer__body > *:not(:last-child) {
+    margin-bottom: 17px;
+}
+
+.body-footer__item a {
+    font-family: "Cormorant Infant", serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.4
+}
+
+.body-footer__item--email a {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.body-footer__address {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.menu-footer__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.menu-footer__link {
+    text-decoration-line: underline;
+}
+
+.footer__line {
+    height: 1px;
+    width: 100%;
+    background: rgba(249, 249, 249, 0.22);
+    margin-bottom: 32px;
+}
+
+.footer__container-big {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.menu-footer__item {
+    transition: color 0.3s;
 }
 
 /*hover*/
@@ -348,46 +839,69 @@
     .menu__item:hover .menu__link {
         text-decoration-line: underline;
     }
-}
 
-@media (any-hover: hover) {
     .menu__item--arrow:hover .menu__link::after {
         transform: rotate(-180deg);
     }
-}
 
-@media (any-hover: hover) {
     .menu__item--arrow:hover .sub-menu {
         opacity: 1;
         visibility: visible;
         transform: translate(0, 0);
         pointer-events: all;
     }
-}
 
-@media (any-hover: hover) {
     .sub-menu__link:hover {
         text-decoration: underline;
     }
-}
 
-@media (any-hover: hover) {
     .actions-header__item:hover {
         transform: scale(1.1);
     }
-}
 
-@media (any-hover: hover) {
+    .product__img:hover {
+        transform: scale(1.03);
+    }
+
     .hero__button:hover::before {
         top: 0;
         left: 0;
     }
-}
 
-@media (any-hover: hover) {
-    .footer__link:hover{
-        text-decoration-line: underline;
+    .body-product__title:hover::after,
+    .earrings__title:hover::after {
+        left: 0;
+        width: 100%;
     }
+
+    .jewels__img:hover {
+        margin: 0;
+    }
+
+    .earrings__img:hover {
+        transform: scale(1.03);
+    }
+
+    .menu-footer__item:hover {
+        color: rgba(213, 132, 23, 1);
+    }
+
+    .we-do__img:hover,
+    .we-do__right-img:hover{
+        padding-top: 0;
+    }
+
+    .we-do__img img:hover,
+    .we-do__right-img img:hover {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .earrings__img-oval:hover::after {
+        bottom: 0;
+        right: 0;
+    }
+
 }
 
 /*media*/
@@ -408,20 +922,43 @@
 
     .content-hero__item {
         align-self: flex-end;
-        margin:  auto 0;
+        margin: auto 0;
     }
 }
 
 @media (max-width: 1550px) {
-    .decor {
+    .decor,
+    .decor-about,
+    .jewels__decor {
         visibility: hidden;
         opacity: 0;
     }
+
+    .earrings__item {
+        flex: 0 1 50%;
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 1200px) {
     .hero__title {
         font-size: 64px;
+    }
+
+    .jewels__container-medium {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .jewels__title {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .jewels__title::after {
+        width: 100%;
     }
 }
 
@@ -439,8 +976,13 @@
         width: 100%;
         height: 100%;
         padding: 70px 15px 30px 15px;
-        background-color: rgba(80, 34, 3, 0.93);
+        background-color: rgba(80, 34, 3, 0.99);
         transition: left 0.3s;
+    }
+
+    .sub-menu__list {
+        width: 100%;
+        background-color: transparent;
     }
 
     .menu__body::before {
@@ -450,7 +992,7 @@
         left: 100%;
         width: 100%;
         height: 50px;
-        background-color: #c7954c;
+        background-color: #fff;
         z-index: 2;
         transition: left 0.3s;
     }
@@ -462,16 +1004,12 @@
 
     .menu__list {
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         row-gap: 25px;
     }
 
-    .menu__item {
-        color: #fff;
-    }
-
     .menu__link {
-        font-size: 26px;
+        font-size: 40px;
     }
 
     .sub-menu {
@@ -483,7 +1021,7 @@
     }
 
     .sub-menu__link {
-        font-size: 24px;
+        font-size: 30px;
     }
 
     .sub-menu__item:not(:last-child) {
@@ -566,17 +1104,105 @@
         text-align: center;
     }
 
-    .footer__container {
-        flex-direction: column;
-        align-items: center;
-        row-gap: 20px;
+    .about {
+        padding: 80px 0;
+    }
+
+    .about__block-card {
+        justify-content: center;
+    }
+
+    .about__we-do {
+        padding-top: 80px;
         text-align: center;
+        flex-direction: column;
+    }
+
+    .we-do__block-right {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .products {
+        padding: 60px 0;
+    }
+
+    .product__block-item {
+        justify-content: center;
+    }
+
+    .product__item {
+        text-align: center;
+        flex: 0 1 50%;
+    }
+
+    .earrings {
+        padding: 100px 0;
+    }
+
+    .earrings__item {
+        flex: 0 1 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer__container-big {
+        justify-content: center;
+
+    }
+
+    .body-footer__item--email a {
+        font-size: 30px;
     }
 }
 
 @media (max-width: 470px) {
-    .hero__title {
+    .hero__title,
+    .we-do__title,
+    .products__title,
+    .jewels__title {
         font-size: 46px;
+    }
+
+    .product__item {
+        flex: 0 1 100%;
+    }
+
+    .jewels__block-card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .earrings__img {
+        width: 100%;
+    }
+
+    .earrings__img-oval::after {
+        opacity: 0;
+    }
+
+    .earrings__img-oval::before {
+        width: 100%;
+        height: 100%;
+    }
+
+    .earrings__body-item {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .earrings__title {
+        font-size: 26px;
+    }
+
+    .earrings__price {
+        font-size: 30px;
+    }
+
+    .footer__label {
+        text-align: center;
     }
 }
 
@@ -591,5 +1217,14 @@
 
     .actions-header {
         gap: 10px;
+    }
+
+    .body-footer__item--email a {
+        font-size: 25px;
+    }
+
+    .menu-footer__list {
+        flex-direction: column;
+        gap: 30px;
     }
 }
